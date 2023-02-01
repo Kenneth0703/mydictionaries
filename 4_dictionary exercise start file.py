@@ -1,8 +1,8 @@
 # This program uses a dictionary as a deck of cards.
-
+import random
 def main():
-    # Create a deck of cards.
-   
+    # Create a deck of cards.           could be like test or quiz!!!! skeleton code
+    card_deck = create_deck()            # card_deck becomes DICT
 
     # Get the number of cards to deal.
     num_cards = int(input('How many cards should I deal? '))
@@ -10,14 +10,14 @@ def main():
 
 
     # Deal the cards.
-
+    deal_cards(card_deck,num_cards)    # rewatch lecture
 
     
     
 
 # The create_deck function returns a dictionary
 # representing a deck of cards.
-def create_deck():
+def create_deck():          # value returning function
     # Create a dictionary with each card and its value
     # stored as key-value pairs.
     deck = {'Ace of Spades':1, '2 of Spades':2, '3 of Spades':3,
@@ -45,33 +45,44 @@ def create_deck():
             'Queen of Diamonds':10, 'King of Diamonds': 10}
 
     # Return the deck.
-
-
+    return deck         # when you have return it means to 
 
 
 # The deal_cards function deals a specified number of cards
 # from the deck.
 
-def deal_cards(deck, number):
-    # Initialize an accumulator for the hand value.
+def deal_cards(deck, number):   # expecting dict and number of cards     VOID function does not return anythig 
+    # Initialize an accumulator for the hand value.         # number and deck are local variables
+    hand_vaule = 0
 
-    
     
     # DATA VALIDATION
     # Make sure the number of cards to deal is not
-    # greater than the number of cards in the deck (52).
-
+    # greater than the number of cards in the deck (52).   
+    if number > len(deck):
+        number = len(deck)
     
     
 
     # Deal the cards and accumulate their values.
-    
+    # while x >= deal:
+    #     return deck.random
+    #     x = x + 1
+    #     print(d)
 
-
+    # for card in range(number): # number repersnts number of card user has asked for 
+    #     card, vale = deck.popitem()
+    #     print(card)         # is not random 
+        
+    for card in range(number):  
+        card = random.choice(list(deck))
+        print(card)  
+        value = deck[card]      # first line value
+        hand_vaule += value     #adds it all up becasue it is in a for loop
     
 
     # Display the value of the hand.
-
+    print(hand_vaule)
     
     
 

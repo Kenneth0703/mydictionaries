@@ -10,8 +10,8 @@ person["pets"] = {"dog": "Fido", "cat": "Sox"}
 
 # print out the name of the second child
 print(person["children"][1])
-#print out the name of the cat
-print(person["cat"])
+# #print out the name of the cat
+#print(person["cat"])
 #iterate through all children and print out each child:
 #print(person["children"])
 # print out the pets in this format:

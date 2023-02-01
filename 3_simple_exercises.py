@@ -1,9 +1,9 @@
 # 1) print out the value for the key 'history' using the dictionary below
 
 
-sampleDict = { 
+sampleDict = {     # only has one key named class class had another dict
    "class":{ 
-      "student":{ 
+      "student":{          # studnet has 2 
          "name":"Mike",
          "marks":{ 
             "physics":70,
@@ -13,18 +13,24 @@ sampleDict = {
    }
 }
 
+score = sampleDict["class"]["student"]["marks"]["history"]
+print(score)
 
-
-
-# 2) Add 2 inches to the son's height.
+# 2) Add 2 inches to the son's height.    make sure you ADD not hard code
 
 dict={"son's name": "Lucas", "son's eyes": "green", "son's height": 32, "son's weight": 25}
 
+# dict["son's height"] = 34     this is my work i hard coded 
+# print(dict["son's height"])
+
+dict["son's height"] += 2    # not hard coding
+print(dict)
 
 
 
 
-# 3) Given a Python dictionary, Change Brad’s salary to 8500
+
+# 3) Given a Python dictionary, Change Brad’s salary to 8500         this means hardcode
 
 sampleDict = {
      'emp1': {'name': 'Jhon', 'salary': 7500},
@@ -35,6 +41,10 @@ sampleDict = {
 
 
 
+sampleDict["emp3"]["salary"] = 8500
+print(sampleDict)
+
+
 
 
 # 4 )Given the dictionary below, add a new key - 'work' with the values shown below:
@@ -42,4 +52,6 @@ sampleDict = {
 
 dict={"name": "Plato", "country": "Ancient Greece", "born": -427, "teacher": "Socrates", "student": "Aristotle"}
 
+dict["work"] = {"work": "Apology , Phaedo , Republic , Symposium"}
+print(dict)
 
