@@ -3,8 +3,8 @@ We have a dictionary of produce with their per unit cost, the number of units so
 since it was manually entered. Print out the details of any produce that has in inaccurate total. Print both the stated total from the dictionary
 as well as the calculated total that shows the discrepancy.
 '''
-
-ProduceDictionary={
+import math                 
+ProduceDictionary={             # the keys are string values # discrepreceny result
     'Potatoes': {
         'cost': 0.86,
         'amt_sold': 39.8,
@@ -48,7 +48,7 @@ ProduceDictionary={
     'Celery': {
         'cost': 3.07,
         'amt_sold': 18.5,
-        'total': 56.8
+        'total': 56.79
     },
     'Spinach': {
         'cost': 4.12,
@@ -193,7 +193,7 @@ ProduceDictionary={
     'Brussels sprouts': {
         'cost': 1.65,
         'amt_sold': 22.9,
-        'total': 37.79
+        'total': 37.78
     },
     'Kale': {
         'cost': 5.02,
@@ -206,4 +206,29 @@ ProduceDictionary={
         'total': 21.87
     }
 }
+for produce in ProduceDictionary:           # produce is a str we need to make our way into each vegitable,
+    cost = ProduceDictionary[produce]["cost"] # everytimg i go through for loop it changes
+    amt_sold  = ProduceDictionary[produce]["amt_sold"]
+    stated_total = ProduceDictionary[produce]["total"]
+    calc_total = round(cost * amt_sold, 2)
+    if calc_total != stated_total:
+        print(f"Produce name: {produce}")
+        print(f'Calculated Total: ${calc_total:.2f}')
+        print(f'Stated Total: ${stated_total:.2f}')
+
+
+
+
+
+
+# total = 0 
+# for dict1 in ProduceDictionary:
+#     x = ProduceDictionary[dict1]
+#     for dict2 in x:
+#         cost = [x]["cost"]
+#         sold = [x]["amt_sold"]
+#     #   total = (cost) + (sold)
+#     print(cost)
+
+
 

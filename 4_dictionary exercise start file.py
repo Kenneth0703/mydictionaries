@@ -53,7 +53,8 @@ def create_deck():          # value returning function
 
 def deal_cards(deck, number):   # expecting dict and number of cards     VOID function does not return anythig 
     # Initialize an accumulator for the hand value.         # number and deck are local variables
-    hand_vaule = 0
+    hand_value = 0
+    value = 0
 
     
     # DATA VALIDATION
@@ -65,24 +66,22 @@ def deal_cards(deck, number):   # expecting dict and number of cards     VOID fu
     
 
     # Deal the cards and accumulate their values.
-    # while x >= deal:
-    #     return deck.random
-    #     x = x + 1
-    #     print(d)
+    for card in range(number):
+        card = random.choice(dict(deck))
+        value = deck
+        print(card)
+        hand_value += value
+        
+
 
     # for card in range(number): # number repersnts number of card user has asked for 
-    #     card, vale = deck.popitem()
-    #     print(card)         # is not random 
+    card, vale = deck.popitem()
+    print(card)          is not random 
         
-    for card in range(number):  
-        card = random.choice(list(deck))
-        print(card)  
-        value = deck[card]      # first line value
-        hand_vaule += value     #adds it all up becasue it is in a for loop
-    
+
 
     # Display the value of the hand.
-    print(hand_vaule)
+    print(hand_value)
     
     
 
