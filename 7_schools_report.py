@@ -11,9 +11,46 @@ Copy that info here:
 "NCAA/NAIA conference number football (IC2020)","130","Southeastern Conference"
 
 
-Display report for all universities that have a graduation rate for Women over 50%
+Display report for all universities that have a graduation rate for Women over 80%
 Display report for all universities that have a total price for in-state students living off campus over $50,000
 
 
-
+# jason library can convert json to python and make it 
 """
+
+import json
+
+infile = open("school_data.json", "r")
+schools =json.load(infile)
+confrence_schools = [372,108,107,130]
+
+print(type(schools))
+
+# how many schools are in this file?
+x = 0
+print(len(schools))
+
+for school in schools: 
+    if school["NCAA"]["NAIA conference number football (IC2020)"] in confrence_schools:     
+        if school["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"] != None:
+            if x == 1: 
+                print(f"University name : {name}")
+                print(f"Graduation Rate for Women :{grad}")
+                print(f"Total Price for Out of State Students: {price}")
+                x = 0
+            elif school["Graduation rate  women (DRVGR2020)"] > 80:
+                name = school["instnm"]
+                grad = school["Graduation rate  women (DRVGR2020)"]
+                print(f"University name : {name}")
+                print(f"Graduation Rate for Women :{grad}")
+                print()
+            if (school["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"] > 50000):
+                print()
+                name = school["instnm"]
+                grad = school["Graduation rate  women (DRVGR2020)"]
+                price = school["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"]
+
+                x = x +1
+                # print(f"Total Price for Out of State Students: {price}")
+
+           
