@@ -39,11 +39,11 @@ for school in schools:
                 print(f"Total Price for Out of State Students: {price}")
                 x = 0
             elif school["Graduation rate  women (DRVGR2020)"] > 80:
+                print()
                 name = school["instnm"]
                 grad = school["Graduation rate  women (DRVGR2020)"]
                 print(f"University name : {name}")
                 print(f"Graduation Rate for Women :{grad}")
-                print()
             if (school["Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"] > 50000):
                 print()
                 name = school["instnm"]

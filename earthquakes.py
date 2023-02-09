@@ -50,7 +50,7 @@ y = 0
 for x in earthquake:
    mag = earthquake[y]["properties"]["mag"]
    y = y + 1
-   if mag >=6:
+   if mag >6:
       x = y -1
       
       Location = earthquake[x]["properties"]["place"]

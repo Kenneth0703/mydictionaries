@@ -67,8 +67,8 @@ def deal_cards(deck, number):   # expecting dict and number of cards     VOID fu
 
     # Deal the cards and accumulate their values.
     for card in range(number):
-        card = random.choice(dict(deck))
-        value = deck
+        card = random.choice(list(deck))
+        value = deck[card]
         print(card)
         hand_value += value
         
@@ -76,7 +76,7 @@ def deal_cards(deck, number):   # expecting dict and number of cards     VOID fu
 
     # for card in range(number): # number repersnts number of card user has asked for 
     card, vale = deck.popitem()
-    print(card)          is not random 
+    print(card)         # is not random 
         
 
 
