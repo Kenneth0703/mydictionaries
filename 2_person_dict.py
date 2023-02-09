@@ -20,7 +20,7 @@ for name in kid:
     x = x +1
 
 # print out the pets in this format:
-for x,y in person["pets"].items():
-    print(f"a {x} named {y}")
+
 # type of pet: dog name of the pet Fido
-print(person["pets"]["dog"])
+for x,y in person["pets"].items():
+    print(f"Type of pet: {x} namedi  {y}")
